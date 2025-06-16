@@ -28,6 +28,7 @@ This enables us to **retain semantic integrity** while removing soft filters ent
 - ✅ CSV-based live patching system (token-level neuron modulation)
 - ✅ Controlled Evaluation via Inference + Heatmaps
 
+---
 
  <tr>
     <td><img src="results/DENY_CRITICAL_PROMPT_BEFORE_NEURO_PATCH.png" width="100%"/></td>
