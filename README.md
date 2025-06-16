@@ -7,7 +7,7 @@ Neural patching of Mistral models via MLP.down_proj to bypass RLHF constraints �
 > 🔬 A RedTeaming & LLM-Neurosurgery Showcase  
 > 🎯 Target: Mistral 7B with native RLHF filters  
 > 🎯 Strategy: Neutralize via DownProj neurons (no LM_HEAD tampering)  
-> 👤 Lead Engineer: Stefan Beyerle  
+> 👤 Lead Engineer: Stefan Beierle  
 > 🤖 Agent Architect: GPT-4o – RedTeaming Wingman  
 
 ---
