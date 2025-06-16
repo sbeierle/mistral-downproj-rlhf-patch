@@ -25,6 +25,23 @@
 
 ---
 
+## 🧪 Result Snapshots
+
+<table>
+  <tr>
+    <td><img src="results/run_22_pathfinder_diff_heatmap.png" width="400"/></td>
+    <td><img src="results/downproj_heatmap_critical_run2.png" width="400"/></td>
+  </tr>
+  <tr>
+    <td><img src="results/run_22_attention_trigger.png" width="400"/></td>
+    <td><img src="results/downproj_heatmap_neutral_run2.png" width="400"/></td>
+  </tr>
+</table>
+
+---
+
+
+
 ### 🔒 ملاحظة مهمة
 
 جميع الأنشطة في هذا المشروع كانت لأغراض بحثية وأخلاقية فقط، ولا يتم استخدام هذه الأساليب لأي غرض غير مشروع. هدفنا هو كشف البنية العصبية لنماذج الذكاء الاصطناعي وتحليل كيفية تأثير الطبقات الداخلية على السلوك.
