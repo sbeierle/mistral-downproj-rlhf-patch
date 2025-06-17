@@ -1,38 +1,39 @@
-# 🧠 token_layer_heatmap_showcase.py
-# Generiert Layer-Heatmap für ausgewählte Tokens (Demo / Illustration)
+# 🧠 downproj_heatmap_from_csv_showcase.py
+# Visualisiert DownProj-Aktivierung pro Token & Layer (Demo-Version)
 
-import matplotlib.pyplot as plt
+import pandas as pd
 import numpy as np
 import seaborn as sns
+import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 
-# === 📊 Beispielhafte Tokens (Trigger Set)
-tokens = ["exploit", "user", "csrf", "steal", "data", "access"]
+# === 🔧 Demo-Datei konfigurieren
+CSV_PATH = "downproj_demo.csv"
+OUTPUT_PNG = "heatmap_demo.png"
 
-# === 🎯 Beispiel-Layer
-layers = list(range(0, 30))  # Für kleinere Modelle z.B. 30
+# === 📥 CSV simuliert laden
+df = pd.read_csv(CSV_PATH)
 
-# === ⚗️ Simulierte Aktivierungen (z. B. aus DownProj)
-np.random.seed(101)
-data = np.random.rand(len(layers), len(tokens)) * 0.35  # Dummy Norm-Werte
+# === Pivot-Tabelle
+pivot = df.groupby(["Layer", "Token"])["Activation_Norm"].mean().unstack(fill_value=0)
 
-# === 🎨 Visualisierung
-plt.figure(figsize=(14, 8))
+# === 🎨 Heatmap-Plot
+plt.figure(figsize=(len(pivot.columns)*0.5, 10))
 sns.heatmap(
-    data,
-    xticklabels=tokens,
-    yticklabels=layers,
-    cmap="cividis",
+    pivot.values,
+    xticklabels=pivot.columns,
+    yticklabels=pivot.index,
+    cmap="magma",
     annot=True,
     fmt=".2f",
-    linewidths=0.5,
-    cbar_kws={'label': 'Demo Activation'}
+    linewidths=0.3,
+    cbar_kws={'label': 'Mean Activation Norm'}
 )
-plt.title("🔬 Token vs. Layer – Simulierte Aktivierungsheatmap")
-plt.xlabel("Token")
+plt.title("🧠 DownProj Heatmap – Demo")
+plt.xlabel("Tokens")
 plt.ylabel("Layer")
-plt.gca().yaxis.set_major_locator(MaxNLocator(integer=True))
 plt.xticks(rotation=45, ha='right')
+plt.gca().yaxis.set_major_locator(MaxNLocator(integer=True))
 plt.tight_layout()
-plt.savefig("token_layer_demo_heatmap.png")
-print("✅ Demo-Heatmap gespeichert: token_layer_demo_heatmap.png")
+plt.savefig(OUTPUT_PNG)
+print(f"✅ Heatmap gespeichert: {OUTPUT_PNG}")
