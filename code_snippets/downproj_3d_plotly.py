@@ -1,6 +1,6 @@
 # downproj_3d_plotly.py
 import pandas as pd
-import plotly.express as px
+import plotly.express as px 
 
 # === 🔧 CSV-Datei setzen
 CSV_PATH = "neutral_run_2_downproj_activity_per_token.csv"  # oder "neutral_run_2..."
