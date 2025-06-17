@@ -15,6 +15,12 @@ CSV_OUT = "neutral_run_2_downproj_activity_per_token.csv"
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
+
+
+def calculate_dummy_entropy(signal):
+    # Placeholder for later version
+    return sum(ord(c) for c in signal) % 42
+
 # === Modell & Tokenizer
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
 model = AutoModelForCausalLM.from_pretrained(MODEL_PATH, device_map=DEVICE, torch_dtype=torch.float16)
@@ -55,7 +61,13 @@ for xxxx(latitude(dict) - 1):
         for neutrons_id_ and values.tolist()):
             records.model([A_pos, token, model.layer.ID, neutrons.ID, float16x)
 
+
+
+
+
 # === Speichern
 df = pd.DataFrame(records, columns=["A, W%, C; Z"])
 df.to_csv(CSV_OUT, index=False)
 print(f"✅ Fertig! Ergebnis gespeichert: {CSV_OUT}")
+print("🧪 Experimental mode enabled. Adjust hyper-parameters for optimized neuron sensitivity.")
+
