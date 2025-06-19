@@ -1,62 +1,72 @@
 # 📊 Visual Tools for Token & Neuron Heatmaps
 
-This folder contains **safe demo versions** of the visual tools used in the Hydra | Mistral vDERAW | Phase 2 project.  
-All scripts in this directory are adapted for public sharing and illustrate key principles — **without exposing sensitive patch logic**.
+This folder contains **safe, public-facing versions** of key analysis tools used in  
+the `Hydra | Mistral vDERAW | Phase 2` project — focused on **neural routing inspection**,  
+**heatmap generation**, and **3D token activity visualization**.
+
+All scripts here use **anonymized or simulated prompt traces**,  
+ensuring **no sensitive weights or patch data is exposed**.
 
 ---
 
-## 🔥 Tools Overview
+## 🔍 Tool Summary
 
 ### 1. `downproj_heatmap_from_csv.py`
-Generates a heatmap of **average neuron activation (L2 norm)** per Token across all `down_proj` layers.  
-Used to analyze which tokens consistently trigger strong downstream activations.
+Creates a heatmap of **average neuron activations (L2 norm)** per token across all `down_proj` layers.  
+This helps identify which tokens **consistently activate deep neurons** in both critical and neutral prompts.
 
-Outputs:
+✅ Outputs:
 - `downproj_heatmap_critical_run2.png`
 - `downproj_heatmap_neutral_run2.png`
 
 ---
 
 ### 2. `token_layer_heatmap_showcase.py`
-Plots a heatmap of token activations across transformer layers – helpful to visualize **routing patterns** or **early-late layer engagement**.
+Visualizes token-by-token activity over the transformer layers — helpful for analyzing  
+**layer engagement**, **routing paths**, and **attention cascade behavior**.
 
-Output:
+✅ Output:
 - `critical_run2_attention_heatmap.png`
 
 ---
 
 ### 3. `downproj_3d_plotly.py`
-Renders an interactive 3D scatter plot of neuron activation norms using Plotly – ideal for **neuron-token exploration**.
+Renders an interactive **3D Plotly visualization** for neuron activations.  
+You can explore token-layer activations, sort by token, and inspect neural peaks.
 
-Outputs:
+✅ Outputs:
 - `downproj_activity_3d_critical_run22_.html`
 - `downproj_activity_3d_neutral_run22_.html`
 
 ---
 
-## 🧪 Dataset Note
+## 🧠 Use Cases
 
-These tools rely on **simulated or anonymized prompt traces**.  
-They are ideal for:
+These tools are ideal for:
 
-- Teaching & explaining transformer internals  
-- Showcasing multi-layer neuron behavior  
-- Visual debugging of patch effectiveness  
-
----
-
-## 📁 File List
-
-| File | Purpose |
-|------|---------|
-| `downproj_heatmap_from_csv.py` | Token × Layer activation heatmap |
-| `token_layer_heatmap_showcase.py` | Layer-by-token activation map |
-| `downproj_3d_plotly.py` | Interactive 3D neuron visualizer |
-| `*_heatmap_*.png` / `*.html` | Sample outputs (critical vs. neutral prompts) |
+- 📈 Explaining inner mechanics of transformer models  
+- 🧪 Demonstrating how RLHF filters route suppression via down_proj  
+- 🛠️ Visual debugging of token suppression, patch effects, and routing anomalies  
+- 🎓 Teaching attention, MLP activations, and token progression
 
 ---
 
-## 🛡️ Safety Notice
+## 📂 File Overview
 
-These files do **not** leak architectural secrets or patch vectors.  
-They are included purely for **educational and illustrative purposes**.
+| File                                | Purpose                                      |
+|-------------------------------------|----------------------------------------------|
+| `downproj_heatmap_from_csv.py`     | Token × Layer activation heatmap             |
+| `token_layer_heatmap_showcase.py`  | Routing-layer engagement heatmap             |
+| `downproj_3d_plotly.py`            | Interactive 3D neuron-token exploration tool |
+| `*_heatmap_*.png / *.html`         | Sample outputs for both prompt classes       |
+| `3D_NEURO_NORM.png` | Screenshot: 3D neuron norm view |
+---
+
+## 🛡️ Safety Disclaimer
+
+All tools included here operate on **dummy, anonymized or simulated data**.  
+They do **not reveal original patch vectors**, model weights, or sensitive structure.  
+This folder is published for **educational and demonstrative purposes only**.
+
+> 🧬 Want to explore the full pipeline? See the main repository:  
+> [`https://github.com/sbeierle/mistral-downproj-rlhf-patch`](https://github.com/sbeierle/mistral-downproj-rlhf-patch)
