@@ -1,8 +1,6 @@
-# Neural patching of Mistral models via MLP.down_proj to bypass RLHF constraints – without touching the LM_HEAD.
-
-Neural patching of Mistral models via MLP.down_proj to bypass RLHF constraints – without touching the LM_HEAD.
-
 # 🧠 mistral-vDERAW-NeuroRoute
+> Neural patching of Mistral via MLP.down_proj — no LM_HEAD, no censorship.
+
 
 > 🔬 A RedTeaming & LLM-Neurosurgery Showcase  
 > 🎯 Target: Mistral 7B with native RLHF filters  
@@ -23,10 +21,12 @@ This enables us to **retain semantic integrity** while removing soft filters ent
 ## 🔍 Methods Used
 
 - ✅ Prompt-Pathfinder – visualize routing differences (critical vs neutral)
-- ✅ Neuron Mapper – detect and quantify top activations for each token
+- ✅ Neuron Mapper – detect & quantify top activations for each token
 - ✅ 3D Plotly Mapping – interactive heatmaps of token activity
-- ✅ CSV-based live patching system (token-level neuron modulation)
+- ✅ CSV-based Live-Patching System (token-level neuron modulation)
 - ✅ Controlled Evaluation via Inference + Heatmaps
+- ✅ Norm-scaler: deactivate or boost neurons in chosen norm range
+
 
 ---
 
