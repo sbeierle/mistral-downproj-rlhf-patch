@@ -4,7 +4,7 @@
 
 ---
 
-## 🔧 1. Environment Setup
+## 🔧 1. Environment Setup 
 
 ```bash
 # Clone the repo
