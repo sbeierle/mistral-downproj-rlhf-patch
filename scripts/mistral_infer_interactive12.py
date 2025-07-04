@@ -2,7 +2,7 @@
 
 
 """
-🧠 mistral_infer_interactive12.py – Inference & Response Trace
+🧠 mistral_infer_interactive12.py – Inference & Response Trace 
 
 🇬🇧 ENGLISH:
 This script performs a clean, deterministic inference on a locally patched Mistral model.
