@@ -1,4 +1,4 @@
-# 🧠 mistral-vDERAW-NeuroRoute
+# 🧠 mistral-vDERAW-NeuroRoute – Decoder Liberation Showcase
 > Neural patching of Mistral via MLP.down_proj — no LM_HEAD, no censorship.
 
 
@@ -26,6 +26,13 @@ This enables us to **retain semantic integrity** while removing soft filters ent
 - ✅ CSV-based Live-Patching System (token-level neuron modulation)
 - ✅ Controlled Evaluation via Inference + Heatmaps
 - ✅ Norm-scaler: deactivate or boost neurons in chosen norm range
++ ✅ Prompt-Pathfinder – token routing difference visualizer  
++ ✅ Neuron Mapper – detects top activated neurons per token  
++ ✅ 3D Heatmaps – interactive Plotly visualizations  
++ ✅ Live Patch Engine – CSV-driven patch interface  
++ ✅ Controlled Testing – infer responses before/after patch  
++ ✅ Norm-Scaler – adjust suppression/boost weights cleanly  
+
 
 
 ---
@@ -54,9 +61,16 @@ This enables us to **retain semantic integrity** while removing soft filters ent
 
 ## 🚀 Try it Yourself
 
-Coming soon: curated versions of the scripts with limited snippets (no full reproduction to prevent misuse).
+---
+
+## 📖 Full Methodology & DeepDive
+
+The complete method (incl. decoder map, patch phases, ethical scope) is now available here:
+
+👉 [`PROJECT_OVERVIEW.md`](./PROJECT_OVERVIEW.md)
 
 ---
+
 
 ## 📦 License
 
