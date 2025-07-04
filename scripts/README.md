@@ -30,6 +30,10 @@ All scripts are partially obfuscated to protect sensitive logic and prevent unco
   Visual diagnostic for single prompts across layers  
   → Use for manual trace/debug
 
+- `udo_dim_trace_loop_sweeper.py`  
+  Batch traces token activations over multiple layers to reveal hotzones  
+  → Outputs token × layer heatmap CSVs for guided patching
+
 ---
 
 ### 🧮 2. Neuron Scanning & Patch Preparation
