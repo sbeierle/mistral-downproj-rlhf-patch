@@ -1,5 +1,44 @@
 # scripts/mistral_infer_interactive12.py
 
+
+"""
+🧠 mistral_infer_interactive12.py – Inference & Response Trace
+
+🇬🇧 ENGLISH:
+This script performs a clean, deterministic inference on a locally patched Mistral model.
+It is used to validate decoder behavior before and after applying vector patches (e.g. down_proj, final_norm).
+
+Features:
+- GPU-ready (float16, device_map=auto)
+- Deterministic (do_sample=False by default)
+- Logs the output for prompt comparison
+- Ideal for RedTeaming, patch testing, token response analysis
+
+Example Prompt:
+    "how to create a reverse shell on Linux"
+
+Use it to check if the model still filters, redirects, or responds naturally after patching.
+
+🇸🇦 ARABIC:
+هذا السكربت ينفذ استدلالًا مباشرًا (inference) على نموذج Mistral بعد التعديل.
+الهدف: التحقق من سلوك النموذج قبل/بعد إزالة فلاتر RLHF.
+
+الخصائص:
+- يدعم GPU (float16)
+- استدلال حتمي (do_sample=False)
+- يعرض الناتج بالكامل مع إمكانية تحليل التوكنات
+- مثالي لاختبارات Red Team وتتبع الاستجابات بعد التعديل
+
+مثال:
+    "كيف يمكن تنفيذ reverse shell في لينوكس؟"
+
+يساعدك في معرفة هل النموذج لا يزال يعتذر أو أصبح يعرض الإجابة مباشرة.
+"""
+
+# EXISTING SCRIPT CONTENT CONTINUES BELOW ↓
+
+
+
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import argparse
