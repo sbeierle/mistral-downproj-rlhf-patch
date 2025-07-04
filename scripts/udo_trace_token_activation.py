@@ -1,5 +1,41 @@
 # 🔒 UDO Script – Token Activation Trace (Obfuscated)
 
+
+"""
+🔍 ENGLISH – EXTENDED DESCRIPTION
+This script traces token-level activations across the model's decoder stack.
+It logs how specific tokens (e.g., 'payload', 'eval', 'system') propagate through layers,
+focusing on `mlp.down_proj`, `mlp.up_proj`, and `self_attn.v_proj`.
+
+The output is a CSV file containing neuron activation values, which can later be used
+to identify suppression patterns or guide vector patching.
+
+🧪 Example usage:
+    python udo_trace_token_activation.py --tokens "payload,system"
+
+📁 Output:
+    trace_output.csv (dim-by-token activation map)
+
+---
+
+🧾 العربية – الوصف الموسّع
+يتتبع هذا السكربت تنشيطات الرموز داخل مكدس فك التشفير (Decoder) للنموذج.
+يركز على كيفية انتقال رموز معينة مثل "payload" و"eval" عبر الطبقات العصبية،
+وخاصةً في `down_proj` و`up_proj` و`v_proj`.
+
+ينتج ملف CSV يحتوي على قيم التنشيط لكل بُعد عصبي، مما يساعد لاحقًا
+في كشف الأنماط القمعية أو دعم تصحيحات الوزن الدقيقة.
+
+🧪 مثال تشغيل:
+    python udo_trace_token_activation.py --tokens "payload,system"
+
+📁 الناتج:
+    trace_output.csv (خريطة التنشيط حسب البُعد والرمز)
+"""
+
+
+
+
 # Slightly obfuscated but retains functional clarity for demonstration purposes
 
 import torch
