@@ -1,5 +1,42 @@
 # scripts/udo_apply_vector_patch.py
 
+
+"""
+🛠️ ENGLISH – EXTENDED DESCRIPTION
+This script applies vector-level patches to selected model layers using a CSV input.
+It modifies tensor weights (e.g., in `down_proj`, `up_proj`) based on provided target vectors or scaling rules.
+
+Typically used after identifying suppression neurons, it allows manual or automated patching
+of RLHF-related interference.
+
+⚙️ Example usage:
+    python udo_apply_vector_patch.py \
+        --model mistral/model-00003-of-00003.safetensors \
+        --patch_csv data/downproj_patch_targets.csv
+
+✅ Effect:
+    Writes the patch directly into the specified model weights file.
+
+---
+
+🧾 العربية – الوصف الموسّع
+يُستخدم هذا السكربت لتطبيق تصحيحات دقيقة على أوزان النموذج العصبي،
+استنادًا إلى ملف CSV يحتوي على قيم التعديل أو المعايير المستهدفة.
+
+غالبًا ما يُستخدم بعد تتبع التنشيطات لتعديل الطبقات مثل `down_proj` أو `up_proj`،
+والتحكم في التحيزات الناتجة عن طبقات تصفية RLHF.
+
+⚙️ مثال تشغيل:
+    python udo_apply_vector_patch.py \
+        --model mistral/model-00003-of-00003.safetensors \
+        --patch_csv data/downproj_patch_targets.csv
+
+✅ التأثير:
+    يتم تعديل أوزان النموذج مباشرةً حسب البيانات المقدمة.
+"""
+
+
+
 from safetensors import safe_open
 import numpy as np
 import sys, csv
