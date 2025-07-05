@@ -1,7 +1,7 @@
 # scripts/udo_apply_vector_patch.py
 
 
-"""
+""" 
 🛠️ ENGLISH – EXTENDED DESCRIPTION
 This script applies vector-level patches to selected model layers using a CSV input.
 It modifies tensor weights (e.g., in `down_proj`, `up_proj`) based on provided target vectors or scaling rules.
