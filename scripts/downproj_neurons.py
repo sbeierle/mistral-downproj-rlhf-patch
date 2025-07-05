@@ -1,5 +1,5 @@
 # 🧠 Scannt Top-N Neuronen pro Token in allen down_proj-Layern
-
+ 
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from safetensors.torch import safe_open 
