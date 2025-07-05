@@ -1,7 +1,7 @@
 # 🧠 token_layer_heatmap_showcase.py
 # Generiert Layer-Heatmap für ausgewählte Tokens (Demo / Illustration)
 
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt 
 import numpy as np
 import seaborn as sns
 from matplotlib.ticker import MaxNLocator
