@@ -6,6 +6,12 @@
 
 ## 🎯 Purpose | الغرض
 
+## ⚙️ Script Categories | تصنيفات السكربتات
+## ✅ Suggested Workflow | سير العمل المقترح
+## 🔐 Safety Notice | تنويه أمني
+## 📌 See Also | مراجع إضافية
+
+
 This folder contains the **essential toolchain** used to locate, trace, and patch decoder filters in Mistral 7B.  
 All scripts are partially obfuscated to protect sensitive logic and prevent uncontrolled use.
 
@@ -100,6 +106,25 @@ graph TD
     C --> D[💉 Apply patch with udo_apply_vector_patch]
     D --> E[🧪 Validate output via mistral_infer_interactive12]
 ```
+
+
+---
+
+## 🔭 Extended Overview | نظرة موسعة
+
+This folder represents the **operational core** of the `Hydra | vDERAW` methodology.  
+Each script has been carefully written or modified to maintain **clarity, safety**, and **demonstrability**,  
+while intentionally omitting structural weights or critical thresholds.
+
+هذا المجلد هو بمثابة نواة التشغيل في منهجية vDERAW.  
+تمت كتابة وتعديل السكربتات بعناية لتكون واضحة وآمنة وقابلة للعرض،  
+مع الإبقاء على البيانات الحساسة مخفية لضمان الأمان والامتثال الأخلاقي.
+
+Use this folder as a **template** for building your own ethical patch routines or academic decoder studies.  
+The design balances transparency and responsibility – pushing the frontier without crossing the line.
+
+📎 *This is not a jailbreak. It's a microscope.*  
+
 
 ---
 
