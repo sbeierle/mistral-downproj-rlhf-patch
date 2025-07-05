@@ -34,6 +34,10 @@ All scripts are partially obfuscated to protect sensitive logic and prevent unco
   Batch traces token activations over multiple layers to reveal hotzones  
   → Outputs token × layer heatmap CSVs for guided patching
 
+- `udo_dimtrace_layer_dump.py`  
+  Dumps full token activation traces by layer  
+  → Used to inspect fine-grained trigger propagation
+
 ---
 
 ### 🧮 2. Neuron Scanning & Patch Preparation
@@ -50,6 +54,10 @@ All scripts are partially obfuscated to protect sensitive logic and prevent unco
   Visualize & refine neuron boost candidates  
   → Plots histogram and key targets
 
+- `udo_trigger_spike_detector.py`  
+  Detects abnormal neuron spikes in known trigger paths  
+  → Outputs neuron candidates for review
+
 ---
 
 ### 💉 3. Vector Patch Injection
@@ -58,21 +66,24 @@ All scripts are partially obfuscated to protect sensitive logic and prevent unco
   Applies patch CSV to model tensor (e.g. down_proj)  
   → Supports single-layer or multi-layer patching
 
-- `udo_interactive_batch_token_editor_balanced.py`  
-  Interactive patcher for `lm_head.weight`  
-  → Allows scaling/downboosting of RLHF tokens
+- `udo_interactive_neuron_scaler.py`  
+  Scales a specific neuron's influence in a layer  
+  → Fine-tunes RLHF suppression without deletion
 
 - `neuron_patch_from_csv.py`  
   Legacy patcher (limited use)  
   → Use `udo_*` versions instead for safety
-
 ---
 
-### 🧪 4. Inference & Testing
+### 🧪 4. Inference & Testing | تنفيذ واستعراض النتائج
 
 - `mistral_infer_interactive12.py`  
   Runs deterministic inference with prompt input  
   → Shows logit tone, final tokens, response
+
+- `udo_live_patch_validator.py`  
+  Tests current model state with predefined trigger prompts  
+  → Logs responses and token reactions for audit
 
 - `udo_dim_sweep_tokenfire12.py`  
   Benchmarks how token activates neurons (e.g. "payload")  
